@@ -1,3 +1,6 @@
+#ifndef JSON_H
+# define JSON_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -115,7 +118,7 @@ static double parse_number_literal(const char **p)
 	return num;
 }
 
-static json_node* create_node(json_type type)
+json_node* create_node(json_type type)
 {
 	json_node *node = malloc(sizeof(json_node));
 	if (!node)
@@ -642,3 +645,5 @@ void free_json(json_node *json)
 	}
 	free(json);
 }
+
+#endif
