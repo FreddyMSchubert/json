@@ -28,7 +28,7 @@ typedef struct s_json_node
 	};
 }	json_node;
 ```
-It's essentially just a more complicated linked list. When elements in an array are just single values, their key is NULL.
+It's essentially just a more complicated linked list. When elements in an array are just single values, their key is NULL. Objects and arrays both save their data in array, even if theres just a single child node. Array is always null-terminated.
 
 Here's the main functions:
 ```C
