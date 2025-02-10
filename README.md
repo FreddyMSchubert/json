@@ -52,9 +52,11 @@ char *formatted = json_to_formatted_string(root);
 printf("Formatted:\n%s\n", formatted);
 
 json_node *numbers = json_find(root, "numbers");
-printf("numbers: %s\n", json_to_string(numbers));
+char *nbrstring = json_to_string(numbers);
+printf("numbers: %s\n", nbrstring);
 
 free(formatted);
+free(nbrstring);
 free_json(root);
 ```
 
